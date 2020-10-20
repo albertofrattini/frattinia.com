@@ -1,0 +1,63 @@
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+
+@tailwind utilities;
+
+@layer base {
+    header {
+        @apply z-10;
+    }
+    h1 {
+        @apply text-5xl font-display font-bold mb-2;
+    }
+    h2 {
+        @apply text-4xl font-display font-bold mb-4;
+    }
+    h3 {
+        @apply text-xl font-display font-bold mb-2;
+    }
+    p {
+        @apply font-body text-gray-800 mb-8 font-light leading-normal;
+    }
+    section {
+        @apply my-4;
+    }
+    .card {
+        @apply mb-8;
+    }
+    .card p {
+        @apply mb-0;
+    }
+    .border-card {
+        @apply p-4 border-solid border rounded border-gray-400 mb-4;
+    }
+    .border-card p {
+        @apply mb-0;
+    }
+    .time-line {
+        @apply w-48px flex-none justify-center;
+    }
+    .event-list {
+        @apply mt-4;
+    }
+    .event {
+        @apply relative mb-4;
+    }
+    .year-event {
+        @apply relative mb-4;
+    }
+    .event h3 {
+        @apply m-0;
+    }
+    .event p {
+        @apply m-0;
+    }
+    .event .event-point {
+        @apply h-point w-point rounded-full bg-fire absolute left-0 top-0 ml-time-inset mt-2;
+    }
+    .year-event .event-point {
+        @apply h-point w-point bg-fire absolute left-0 top-0 ml-time-inset mt-2;
+    }
+}
