@@ -1,21 +1,24 @@
 import React from 'react'
 import Link from 'next/link'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMoon } from '@fortawesome/free-solid-svg-icons'
+
 const Header = () => {
     return (
-        <header className="fixed top-0 left-0 right-0 flex justify-between mx-auto w-full max-w-4xl p-8 flex bg-white bg-opacity-99">
-            <div className="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2 rounded">
-                &Oslash;
-            </div>
+        <header>
+            <button className="text-center bg-gray-200 hover:bg-gray-300 px-3 py-2 rounded">
+                <FontAwesomeIcon icon={faMoon} className="text-gray-800" />
+            </button>
             <div className="flex">
                 <Link href="/">
-                    <a className="p-4 font-mono text-gray-900">/home</a>
+                    <a className="header-link md:py-2 md:px-4">/home</a>
                 </Link>
                 <Link href="/blog">
-                    <a className="p-4 font-mono text-gray-900">/blog</a>
+                    <a className="header-link md:py-2 md:px-4">/blog</a>
                 </Link>
                 <Link href="/about">
-                    <a className="p-4 font-mono text-gray-900">/about</a>
+                    <a className="header-link md:py-2 md:px-4">/about</a>
                 </Link>
             </div>
         </header>

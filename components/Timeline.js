@@ -7,30 +7,48 @@ const Timeline = () => {
 
     const additionalTimeline = showMore ? (
         <div className="animate-open">
-            <Event
-                sub="You’ve found my personal slice of the internet – everything
-                    you want to know and more is here."
-            >
-                First Job @ Socialbakers
+            <Event>
+                Started studying and using React to develop Emozionalmente
             </Event>
-            <Event>Graduated on a video-call 🎓</Event>
-            <Event>Create Emozionalmente for my Master Thesis</Event>
+            <Event>Created Fantacalcio auction website</Event>
+            <Event>Started using Javascript, HTML and CSS 👨🏻‍💻</Event>
             <br />
-            <Event isYear>2020</Event>
+            <Event isYear>2019</Event>
             <br />
-            <Event>Moved to Prague</Event>
-            <Event
-                sub="You’ve found my personal slice of the internet – everything
-                    you want to know and more is here."
-            >
-                First Job @ Socialbakers
+            <Event>Lean Startup Program</Event>
+            <Event>Met my girlfriend 👩🏻</Event>
+            <Event>Went to Spain (A Coruña) for my Erasmus 🇪🇸</Event>
+            <br />
+            <Event isYear>2018</Event>
+            <br />
+            <Event>
+                Started Computer Engineering Master @ Politecnico di Milano
             </Event>
-            <Event>Graduated on a video-call 🎓</Event>
-            <Event>Create Emozionalmente for my Master Thesis</Event>
+            <Event>Bachelor graduation 👨🏻‍🎓</Event>
+            <Event>Moved back home for 6 months</Event>
             <br />
-            <Event isYear>2020</Event>
+            <Event isYear>2017</Event>
             <br />
-            <Event>Moved to Prague</Event>
+            <Event>Started photography 📷</Event>
+            <br />
+            <Event isYear>2016</Event>
+            <br />
+            <Event>Learned my first programming language: C</Event>
+            <Event>Started Computer Engineering @ Politecnico di Milano</Event>
+            <br />
+            <Event isYear>2014</Event>
+            <br />
+            <Event>Started playing guitar 🎸</Event>
+            <br />
+            <Event isYear>2007</Event>
+            <br />
+            <Event>Started playing football ⚽</Event>
+            <br />
+            <Event isYear>2001</Event>
+            <br />
+            <Event>Born 👶🏻</Event>
+            <br />
+            <Event isYear>1995</Event>
         </div>
     ) : null
 
@@ -47,19 +65,20 @@ const Timeline = () => {
                     >
                         First Job @ Socialbakers
                     </Event>
-                    <Event>Graduated on a video-call 🎓</Event>
-                    <Event>Create Emozionalmente for my Master Thesis</Event>
+                    <Event>Graduated on a video-call 👨🏻‍🎓</Event>
+                    <Event>Covid-19 started to spread 🦠</Event>
+                    <Event>Created Emozionalmente for my Master Thesis</Event>
                     <br />
                     <Event isYear>2020</Event>
                     <br />
-                    <Event>Moved to Prague</Event>
+                    <Event>Moved to Prague 🏰</Event>
                     {additionalTimeline}
                 </div>
             </div>
             {!showMore && (
                 <div className="flex justify-center">
                     <button
-                        className="border border-solid rounded px-4 py-2 my-16"
+                        className="border border-solid rounded px-4 py-2 my-8 hover:bg-gray-300"
                         onClick={() => setMore(true)}
                     >
                         See more &darr;

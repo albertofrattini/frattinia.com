@@ -7,7 +7,10 @@
 
 @layer base {
     header {
-        @apply z-10;
+        @apply z-10 fixed top-0 left-0 right-0 flex justify-between mx-auto w-full max-w-4xl p-10 bg-white bg-opacity-99;
+    }
+    footer {
+        @apply flex justify-between mx-auto w-full max-w-sm px-8 pt-8 pb-16 bg-white;
     }
     h1 {
         @apply text-5xl font-display font-bold mb-2;
@@ -16,7 +19,7 @@
         @apply text-4xl font-display font-bold mb-4;
     }
     h3 {
-        @apply text-xl font-display font-bold mb-2;
+        @apply text-xl font-display font-bold mb-2 text-gray-900;
     }
     p {
         @apply font-body text-gray-800 mb-8 font-light leading-normal;
@@ -24,10 +27,16 @@
     section {
         @apply my-4;
     }
+    .header-link {
+        @apply p-2 font-mono text-gray-900;
+    }
+    .header-link:hover {
+        @apply text-fire;
+    }
     .card {
         @apply mb-8;
     }
-    .card p {
+    .card h3 + p {
         @apply mb-0;
     }
     .border-card {
@@ -43,19 +52,22 @@
         @apply mt-4;
     }
     .event {
-        @apply relative mb-4;
+        @apply relative mb-8;
     }
     .year-event {
-        @apply relative mb-4;
+        @apply relative mb-8;
+    }
+    .year-event h3 {
+        @apply font-light;
     }
     .event h3 {
-        @apply m-0;
+        @apply m-0 text-base;
     }
     .event p {
         @apply m-0;
     }
     .event .event-point {
-        @apply h-point w-point rounded-full bg-fire absolute left-0 top-0 ml-time-inset mt-2;
+        @apply h-point w-point rounded-full bg-fire absolute left-0 top-0 ml-time-inset mt-1;
     }
     .year-event .event-point {
         @apply h-point w-point bg-fire absolute left-0 top-0 ml-time-inset mt-2;
