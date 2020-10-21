@@ -5,7 +5,10 @@ module.exports = {
         // defaultLineHeights: true,
         // standardFontWeights: true
     },
-    purge: [],
+    purge: {
+        enabled: process.env.NODE_ENV === 'production',
+        content: ['components/**/*.js', 'pages/**/*.js'],
+    },
     theme: {
         fontFamily: {
             display: ['Open Sans', 'sans-serif'],
