@@ -2,29 +2,26 @@ import React from 'react'
 
 import Timeline from '../components/Timeline'
 import Card from '../components/Card'
+import Post from '../components/Post'
+
+import { frontMatter as firstArticle } from './blog/first-article.mdx'
+import { frontMatter as secondArticle } from './blog/second-article.mdx'
+import { parseDate } from '../utils/data-reducers'
 
 const Home = () => {
-    const homeArticles = [
-        // {
-        //     title: 'How to make something happen',
-        //     content:
-        //         'In this articles I am describing the actions that must be taken in order to change something in this world. If you are interested in this topic, please click this link because you will be amazed by how simple it is.',
-        //     href: '/blog',
-        // },
-    ]
-
-    const renderedArticles = homeArticles.length ? (
-        homeArticles.map(({ title, content, href }) => (
-            <Card key={href} title={title} href={href} isInternal>
-                {' '}
-                {content}
-            </Card>
-        ))
-    ) : (
-        <p>
-            <i>Oops, no articles have been written yet...</i>
-        </p>
-    )
+    const homePageArticles = [firstArticle, secondArticle]
+    const renderedArticles = homePageArticles.map((article) => (
+        <Post
+            key={article.title}
+            title={article.title}
+            additionalInfo={`${parseDate(article.date)} • ${
+                article.readingTime.text
+            }`}
+            href={article.__resourcePath.replace('.mdx', '')}
+        >
+            {article.summary}
+        </Post>
+    ))
 
     return (
         <div className="mx-auto w-full max-w-3xl p-8">

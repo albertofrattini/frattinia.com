@@ -7,7 +7,7 @@
 
 @layer base {
     header {
-        @apply z-10 fixed top-0 left-0 right-0 flex justify-between mx-auto w-full max-w-4xl py-10 px-8 bg-white bg-opacity-99;
+        @apply z-10 fixed top-0 left-0 right-0 flex justify-between mx-auto w-full max-w-4xl py-12 px-8 bg-white bg-opacity-99;
     }
     footer {
         @apply flex justify-between mx-auto w-full max-w-sm px-8 pt-8 pb-16 bg-white;
@@ -22,10 +22,19 @@
         @apply text-xl font-display font-bold mb-2 text-gray-900;
     }
     p {
-        @apply font-body text-gray-800 mb-8 font-light leading-normal;
+        @apply font-body text-gray-800 mb-8 font-light leading-relaxed;
     }
     section {
         @apply my-4;
+    }
+    .avatar {
+        @apply w-5 h-5 rounded-full;
+    }
+    .frontmatter {
+        @apply flex justify-between mb-16;
+    }
+    .frontmatter p {
+        @apply text-sm text-gray-700 ml-2 mb-0;
     }
     .header-link {
         @apply p-2 font-mono text-gray-900;

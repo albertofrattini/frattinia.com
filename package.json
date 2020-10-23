@@ -13,13 +13,18 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/react-fontawesome": "^0.1.11",
+    "babel-plugin-import-glob-array": "^0.2.0",
+    "mdx-prism": "^0.3.1",
     "next": "9.5.5",
+    "next-mdx-enhanced": "^4.0.0",
     "react": "16.14.0",
     "react-dom": "16.14.0",
+    "reading-time": "^1.2.0",
+    "remark-code-titles": "^0.1.1",
     "tailwindcss": "^1.9.2"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^3.0.0",
-    "postcss-preset-env": "^6.7.0"
+    "postcss-preset-env": "^6.7.0",
+    "rehype": "^11.0.0"
   }
 }
