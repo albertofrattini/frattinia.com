@@ -12,10 +12,10 @@ const Blog = () => {
             date,
             summary,
             readingTime,
-            __resourcePath,
+            __resourcePath: path,
         } = frontMatter
 
-        const slug = __resourcePath.replace('.mdx', '')
+        const slug = path.replace('.mdx', '')
         const formattedDate = parseDate(date)
 
         return (

@@ -4,24 +4,30 @@ import Timeline from '../components/Timeline'
 import Card from '../components/Card'
 import Post from '../components/Post'
 
-import { frontMatter as firstArticle } from './blog/first-article.mdx'
-import { frontMatter as secondArticle } from './blog/second-article.mdx'
+import { frontMatter as blogArticle } from './blog/create-blog-nextjs-tailwind.mdx'
 import { parseDate } from '../utils/data-reducers'
 
 const Home = () => {
-    const homePageArticles = [firstArticle, secondArticle]
-    const renderedArticles = homePageArticles.map((article) => (
-        <Post
-            key={article.title}
-            title={article.title}
-            additionalInfo={`${parseDate(article.date)} • ${
-                article.readingTime.text
-            }`}
-            href={article.__resourcePath.replace('.mdx', '')}
-        >
-            {article.summary}
-        </Post>
-    ))
+    const homePageArticles = [blogArticle]
+    const renderedArticles = homePageArticles.map((article) => {
+        const {
+            title,
+            date,
+            readingTime,
+            __resourcePath: path,
+            summary,
+        } = article
+        return (
+            <Post
+                key={title}
+                title={title}
+                additionalInfo={`${parseDate(date)} • ${readingTime.text}`}
+                href={path.replace('.mdx', '')}
+            >
+                {summary}
+            </Post>
+        )
+    })
 
     return (
         <div className="mx-auto w-full max-w-3xl p-8">
