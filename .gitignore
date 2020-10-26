@@ -12,6 +12,9 @@
 /.next/
 /out/
 
+# mdx
+/.mdx-data/
+
 # production
 /build
 
