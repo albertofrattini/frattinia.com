@@ -12,7 +12,7 @@ import { faEnvelopeOpen } from '@fortawesome/free-regular-svg-icons'
 
 const Footer = () => {
     return (
-        <footer>
+        <footer className="flex justify-between mx-auto w-full max-w-sm px-8 pt-8 pb-16 bg-white">
             <a
                 className="py-2 px-3 hover:bg-gray-200 rounded border-gray-200"
                 href="https://github.com/albifrattini"

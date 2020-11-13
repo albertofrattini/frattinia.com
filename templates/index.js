@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 import { parseDate } from '../utils/data-reducers'
 
@@ -10,7 +11,13 @@ const BlogPost = ({ frontMatter, children }) => {
             <h1 className="text-4xl md:text-5xl">{frontMatter.title}</h1>
             <div className="frontmatter">
                 <div className="flex">
-                    <img className="avatar" src="http://tiny.cc/p0o0tz" />
+                    <Image
+                        className="rounded-full"
+                        height="24"
+                        width="24"
+                        quality="100"
+                        src="/images/me.png"
+                    />
                     <p>{frontMatter.author}</p>
                 </div>
                 <p>{formattedDate + ' • ' + frontMatter.readingTime.text}</p>

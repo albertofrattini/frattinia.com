@@ -31,7 +31,7 @@ const Home = () => {
 
     return (
         <div className="mx-auto w-full max-w-3xl p-8">
-            <h1>Hello, I am Alberto Frattini</h1>
+            <h1>Hey, I am Alberto</h1>
             <p>
                 I’m a developer and, somehow, a creative. You’ve found my
                 personal slice of the internet – everything you want to know and
@@ -46,7 +46,6 @@ const Home = () => {
             <section>
                 <h2>Projects</h2>
                 <Card
-                    hasBorder
                     href="https://polimi-hyp-2019-team-10496529.herokuapp.com/"
                     title="📚 Libreggiamo"
                     techs={['Node.js', 'Javascript', 'HTML', 'CSS', 'Heroku']}
@@ -57,7 +56,6 @@ const Home = () => {
                     Ghiringhelli.
                 </Card>
                 <Card
-                    hasBorder
                     href="http://ilfanta-tradanui.herokuapp.com/"
                     title="⚽ Fantacalcio"
                     techs={['Node.js', 'Javascript', 'HTML', 'CSS', 'Heroku']}
@@ -68,7 +66,6 @@ const Home = () => {
                     auction.
                 </Card>
                 <Card
-                    hasBorder
                     href="https://i3lab.elet.polimi.it/emozionalmente/"
                     title="😊 Emozionalmente"
                     techs={['Node.js', 'React.js', 'D3']}
