@@ -1,8 +1,26 @@
 import React from 'react'
+import Head from 'next/head'
 
 const About = () => {
     return (
-        <div className="mx-auto w-full max-w-3xl p-8">
+        <>
+            <Head>
+                <title>About | Alberto Frattini</title>
+                <meta
+                    property="og:url"
+                    content="https://albertofrattini.com/about"
+                />
+                <meta
+                    property="og:title"
+                    content="About | Alberto Frattini"
+                    key="title"
+                />
+                <meta
+                    property="og:description"
+                    content="About me. I’m a developer and, somehow, a creative. Primarily I deal with Javascript and some of the stuff around it, suchs as React and Node."
+                    key="description"
+                />
+            </Head>
             <h1>About Me</h1>
             <p>
                 Hey, I am Alberto and I’m a developer and, somehow, a creative.
@@ -38,7 +56,7 @@ const About = () => {
                 🇨🇿 🇮🇹 🇹🇭 🇵🇹 🇪🇸 🇨🇭 🏴󠁧󠁢󠁥󠁮󠁧󠁿 🇪🇬 🇳🇱 🇫🇷 🇬🇷 🇦🇱 🇲🇪 🇷🇸 🇭🇷 🇲🇦 🇩🇪 🇮🇸 🇺🇸 🇮🇪 🇦🇹
                 🇸🇮 🇧🇦
             </p>
-        </div>
+        </>
     )
 }
 

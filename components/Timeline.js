@@ -59,13 +59,12 @@ const Timeline = () => {
                     <div className="bg-fire w-px h-full mx-auto"></div>
                 </div>
                 <div className="event-list">
-                    <Event
-                        sub="You’ve found my personal slice of the internet – everything
-                    you want to know and more is here."
-                    >
+                    <Event sub="Finally my first job as a Software Engineer! I waited for this moment long enough...">
                         First Job @ Socialbakers
                     </Event>
-                    <Event>Graduated on a video-call 👨🏻‍🎓</Event>
+                    <Event sub="You know, in these days this is the way graduations happen. It was an interesting experience, but for sure it could not replace what could have happened face-to-face">
+                        Graduated on a video-call 👨🏻‍🎓
+                    </Event>
                     <Event>Covid-19 started to spread 🦠</Event>
                     <Event>Created Emozionalmente for my Master Thesis</Event>
                     <br />
@@ -78,7 +77,7 @@ const Timeline = () => {
             {!showMore && (
                 <div className="flex justify-center">
                     <button
-                        className="border border-solid rounded px-4 py-2 my-8 hover:bg-gray-300"
+                        className="rounded px-4 py-2 my-8 hover:bg-gray-200"
                         onClick={() => setMore(true)}
                     >
                         See more &darr;

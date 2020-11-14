@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 
 import Post from '../components/Post'
 
@@ -31,7 +32,24 @@ const Blog = () => {
     })
 
     return (
-        <div className="mx-auto w-full max-w-3xl p-8">
+        <>
+            <Head>
+                <title>Blog | Alberto Frattini</title>
+                <meta
+                    property="og:url"
+                    content="https://albertofrattini.com/blog"
+                />
+                <meta
+                    property="og:title"
+                    content="Blog | Alberto Frattini"
+                    key="title"
+                />
+                <meta
+                    property="og:description"
+                    content="Blog. This is where my ideas are meeting the paper (or in this case, the screen)"
+                    key="description"
+                />
+            </Head>
             <h1>Blog</h1>
             <p>
                 I've never been writing before and I want to make an experiment.
@@ -39,7 +57,7 @@ const Blog = () => {
             <br />
             <h2>All Posts</h2>
             {renderedPosts}
-        </div>
+        </>
     )
 }
 

@@ -7,7 +7,9 @@ const Layout = ({ children }) => {
     return (
         <>
             <Header />
-            <main className="mt-32">{children}</main>
+            <main className="mt-24 mx-auto w-full max-w-3xl p-8">
+                {children}
+            </main>
             <Footer />
         </>
     )
