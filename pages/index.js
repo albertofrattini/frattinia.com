@@ -37,7 +37,7 @@ const Home = () => {
                 <meta property="og:url" content="https://albertofrattini.com" />
                 <meta
                     property="og:title"
-                    content="Alberto Frattini - Developer"
+                    content="Alberto Frattini | Developer"
                     key="title"
                 />
                 <meta

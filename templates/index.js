@@ -23,7 +23,7 @@ const BlogPost = ({ frontMatter, children }) => {
                     key="description"
                 />
             </Head>
-            <article className="mx-auto w-full max-w-3xl p-8">
+            <article>
                 <h1 className="text-4xl mb-4 md:text-5xl">
                     {frontMatter.title}
                 </h1>
