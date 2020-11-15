@@ -6,7 +6,7 @@ module.exports = withMdxEnhanced({
     layoutPath: 'templates',
     defaultLayout: true,
     remarkPlugins: [require('remark-code-titles')],
-    rehypePlugins: [mdxPrism],
+    // rehypePlugins: [mdxPrism],
     extendFrontMatter: {
         process: (mdxContent) => ({
             wordCount: mdxContent.split(/\s+/gu).length,

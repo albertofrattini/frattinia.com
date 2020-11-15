@@ -15,8 +15,23 @@
     p {
         @apply font-body text-gray-800 mb-8 font-thin leading-normal;
     }
+    li {
+        @apply font-thin text-gray-800;
+    }
     section {
         @apply my-4;
+    }
+    pre {
+        @apply py-4 px-4 bg-gray-200 mb-8 rounded overflow-x-scroll;
+    }
+    code {
+        @apply px-1 bg-gray-200 rounded text-fire font-body font-normal;
+    }
+    pre code {
+        @apply font-mono text-black p-0 text-sm;
+    }
+    .remark-code-title {
+        @apply p-2 bg-gray-400;
     }
     .frontmatter {
         @apply flex justify-between items-center mb-16;
