@@ -21,4 +21,7 @@ module.exports = withMdxEnhanced({
 
         return config
     },
+    images: {
+        domains: ['i.scdn.co'],
+    },
 })
