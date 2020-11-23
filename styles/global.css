@@ -61,10 +61,10 @@
         @apply relative mb-8;
     }
     .year-event h3 {
-        @apply font-light leading-normal;
+        @apply font-light font-hsans leading-normal;
     }
     .event h3 {
-        @apply m-0 text-base leading-normal;
+        @apply m-0 text-lg font-hsans leading-normal;
     }
     .event p {
         @apply m-0;
