@@ -13,9 +13,9 @@ import Playing from './Playing'
 
 const Footer = () => {
     return (
-        <footer className="flex flex-col justify-center mx-auto mt-12 max-w-sm w-full px-8 pt-8 pb-16 bg-white">
+        <footer className="flex flex-col justify-center mx-auto mt-12 max-w-md w-full p-6 bg-white">
             <Playing />
-            <div className="flex justify-between">
+            <div id="contacts" className="flex justify-between">
                 <a
                     className="py-2 px-3 hover:bg-gray-200 rounded"
                     href="https://github.com/albifrattini"
@@ -77,6 +77,12 @@ const Footer = () => {
                     />
                 </a>
             </div>
+            <br />
+            <hr />
+            <br />
+            <p className="text-center text-gray-700 text-sm">
+                © 2020 Alberto Frattini - Published with Vercel
+            </p>
         </footer>
     )
 }

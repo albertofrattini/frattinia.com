@@ -7,10 +7,10 @@ const Post = ({ href, title, additionalInfo, children }) => {
         <Link href={href}>
             <a>
                 <div className="mb-8">
-                    <h3 className="hover:underline">{title}</h3>
+                    <h3 className="font-hsans text-2xl md:text-3xl">{title}</h3>
                     <p className="mb-0">{children}</p>
                     {additionalInfo && (
-                        <p className="mt-2 text-xs text-gray-700">
+                        <p className="mt-3 text-sm text-gray-700">
                             {additionalInfo}
                         </p>
                     )}

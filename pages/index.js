@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
 
-import Timeline from '../components/Timeline'
 import Card from '../components/Card'
 import Post from '../components/Post'
 
@@ -46,20 +46,21 @@ const Home = () => {
                     key="description"
                 />
             </Head>
-            <h1>Hey, I am Alberto</h1>
-            <p>
-                I’m a developer and, somehow, a creative. You’ve found my
-                personal slice of the internet – everything you want to know and
-                more is here.
-            </p>
-            <br />
             <section>
-                <h2>From my Blog</h2>
                 {renderedArticles}
+                <div className="flex justify-center">
+                    <Link href="/blog">
+                        <a className="rounded px-4 py-2 my-8 hover:bg-gray-200">
+                            More articles &rarr;
+                        </a>
+                    </Link>
+                </div>
             </section>
             <br />
             <section>
-                <h2>Projects</h2>
+                <h2 className="font-serif underlined-title md:text-4xl">
+                    My Projects
+                </h2>
                 <Card
                     href="https://polimi-hyp-2019-team-10496529.herokuapp.com/"
                     title="Libreggiamo"
@@ -85,11 +86,6 @@ const Home = () => {
                     to others' with the purpose of collecting and validating
                     samples lately used in Emotional Speech Recognition.
                 </Card>
-            </section>
-            <br />
-            <section>
-                <h2>Timeline</h2>
-                <Timeline />
             </section>
         </>
     )

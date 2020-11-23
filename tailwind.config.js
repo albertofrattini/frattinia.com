@@ -10,12 +10,16 @@ module.exports = {
         content: ['components/**/*.js', 'pages/**/*.js', 'templates/**/*.js'],
     },
     theme: {
-        fontFamily: {
-            display: ['Open Sans', 'sans-serif'],
-            body: ['Mulish', 'sans-serif'],
-            mono: ['Roboto Mono', 'monospace'],
-        },
         extend: {
+            fontFamily: {
+                hsans: ['Open Sans', 'sans-serif'],
+                sans: ['Mulish', 'sans-serif'],
+                mono: ['Roboto Mono', 'monospace'],
+                serif: ['Merriweather', 'sans-serif'],
+            },
+            boxShadow: {
+                blurred: '0 1px 16px rgba(0,0,0,0.05)',
+            },
             width: {
                 '48px': '48px',
                 point: '13px',
@@ -23,11 +27,16 @@ module.exports = {
             height: {
                 point: '13px',
             },
+            minHeight: {
+                header: '256px',
+            },
             opacity: {
                 99: '0.99',
             },
             colors: {
-                fire: '#EC564D',
+                primary: '#105EDB',
+                secondary: '#EC564D',
+                fosforescent: '#64F58D',
             },
             margin: {
                 'time-inset': '-30px',

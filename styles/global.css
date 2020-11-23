@@ -3,29 +3,38 @@
 @tailwind utilities;
 
 @layer base {
+    html {
+        scroll-behavior: smooth;
+    }
     h1 {
-        @apply text-5xl font-display font-bold mb-2 leading-tight;
+        @apply text-5xl font-serif font-bold mb-2 leading-tight;
     }
     h2 {
-        @apply text-4xl font-display font-bold mb-4 leading-tight;
+        @apply text-3xl font-serif font-bold mb-12 leading-tight;
     }
     h3 {
-        @apply text-xl font-display font-bold mb-2 text-gray-900 leading-tight;
+        @apply text-xl font-serif font-bold mb-2 text-gray-900 leading-tight;
     }
     p {
-        @apply font-body text-gray-800 mb-8 font-thin leading-normal;
+        @apply font-sans text-gray-800 mb-8 font-thin text-lg leading-normal;
+    }
+    a {
+        @apply text-lg font-normal;
     }
     li {
         @apply font-thin text-gray-800;
     }
+    input {
+        @apply border border-gray-500 rounded py-2 px-4 w-full;
+    }
     section {
-        @apply my-4;
+        @apply my-8;
     }
     pre {
         @apply py-4 px-4 bg-gray-200 mb-8 rounded overflow-x-scroll;
     }
     code {
-        @apply px-1 bg-gray-200 rounded text-fire font-body font-normal;
+        @apply px-1 bg-gray-200 rounded text-secondary font-sans font-normal;
     }
     pre code {
         @apply font-mono text-black p-0 text-sm;
@@ -61,9 +70,21 @@
         @apply m-0;
     }
     .event .event-point {
-        @apply h-point w-point rounded-full bg-fire absolute left-0 top-0 ml-time-inset mt-1;
+        @apply h-point w-point rounded-full bg-secondary absolute left-0 top-0 ml-time-inset mt-1;
     }
     .year-event .event-point {
-        @apply h-point w-point bg-fire absolute left-0 top-0 ml-time-inset mt-2;
+        @apply h-point w-point bg-secondary absolute left-0 top-0 ml-time-inset mt-2;
+    }
+    .underlined-title {
+        position: relative;
+    }
+    .underlined-title:before {
+        content: '';
+        position: absolute;
+        bottom: -1rem;
+        left: 0;
+        width: 96px;
+        height: 1px;
+        background-color: black;
     }
 }

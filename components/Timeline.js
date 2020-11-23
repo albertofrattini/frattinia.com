@@ -56,7 +56,7 @@ const Timeline = () => {
         <>
             <div className="flex">
                 <div className="time-line">
-                    <div className="bg-fire w-px h-full mx-auto"></div>
+                    <div className="bg-secondary w-px h-full mx-auto"></div>
                 </div>
                 <div className="event-list">
                     <Event sub="Finally my first job as a Software Engineer! I waited for this moment long enough...">
