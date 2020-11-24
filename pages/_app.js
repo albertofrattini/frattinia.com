@@ -11,7 +11,7 @@ function App({ Component, pageProps, router }) {
             <Head>
                 <link rel="shortcut icon" href="/images/favicon.ico" />
                 <link
-                    href="https://fonts.googleapis.com/css?family=Merriweather:400,500,700"
+                    href="https://fonts.googleapis.com/css?family=Merriweather:700"
                     rel="stylesheet"
                 ></link>
                 <link
@@ -19,7 +19,11 @@ function App({ Component, pageProps, router }) {
                     rel="stylesheet"
                 ></link>
                 <link
-                    href="https://fonts.googleapis.com/css?family=Mulish:300,400"
+                    href="https://fonts.googleapis.com/css?family=Mulish:400,700"
+                    rel="stylesheet"
+                ></link>
+                <link
+                    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700"
                     rel="stylesheet"
                 ></link>
             </Head>

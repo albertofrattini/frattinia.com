@@ -23,10 +23,10 @@ const Playing = () => {
                     />
                 </div>
                 <div className="ml-3 overflow-x-hidden">
-                    <p className="m-0 font-normal truncate">
+                    <p className="m-0 truncate">
                         {data && (data.title || 'Not Playing')}
                     </p>
-                    <p className="m-0 font-normal text-gray-600 truncate">
+                    <p className="m-0 text-gray-600 truncate">
                         {data && (data.artist || 'Spotify')}
                     </p>
                 </div>

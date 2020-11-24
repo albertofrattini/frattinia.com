@@ -66,7 +66,7 @@ const Home = () => {
                     title="Libreggiamo"
                     techs={['Node.js', 'Javascript', 'HTML', 'CSS', 'Heroku']}
                 >
-                    I didn't know nothing about HTML, CSS and JS before this
+                    I didn't know anything about HTML, CSS and JS before this
                     website. And this was happening only in 2019.
                 </Card>
                 <Card

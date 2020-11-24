@@ -12,6 +12,6 @@ module.exports = {
     '/about': {
         title: 'About Me',
         subtitle:
-            'Here you can find a brief introduction of myself. I hope it will tease you to know to make you want to me better...',
+            'Here you can find a brief introduction of myself. I hope it will tease you and make you want to know me better...',
     },
 }

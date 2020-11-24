@@ -25,19 +25,28 @@ const About = () => {
             </Head>
             <section>
                 <p>
-                    Hey, I am Alberto and I’m a developer and, somehow, a
-                    creative. Primarily I deal with Javascript and some of the
-                    stuff around it, such as React and Node.
-                    <br />
-                    <br />
-                    When I don't write code or create new designs, I like to
-                    play football or, eventually, go running. I played guitar,
-                    and before it piano, for many years but I don't do it that
-                    much anymore, even if I just got an Arturia Minilab MKII and
-                    I'm ready to unleash some creative notes on Ableton Live.
-                    Another great interest of mine is photography that, combined
-                    with my passion for exploring and travelling, creates a
-                    great combo. Well, check my pics out on my instagram.
+                    I am an Italian developer 👨🏻‍💻 and, somehow, a creative. I am
+                    now living in Prague 🏰 and I am working as a Software
+                    Engineer at Socialbakers.
+                </p>
+            </section>
+            <br />
+            <section>
+                <h2 className="font-serif underlined-title">
+                    What I Like Doing
+                </h2>
+                <p>
+                    Primarily I deal with Javascript and some of the stuff
+                    around it, such as React and Node. When I don't write code
+                    or create new designs, I like to play football ⚽ or,
+                    eventually, go running 🏃. I played guitar 🎸, and before it
+                    piano 🎹, for many years but I don't do it that much
+                    anymore, even if I just got an Arturia Minilab MKII and I'm
+                    ready to unleash some creative notes on Ableton Live.
+                    Another great interest of mine is photography 📷 that,
+                    combined with my passion for exploring and travelling,
+                    creates a great combo. Well, check my pics out on my
+                    instagram.
                 </p>
             </section>
             <br />

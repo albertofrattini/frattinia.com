@@ -59,7 +59,7 @@ const Timeline = () => {
                     <div className="bg-secondary w-px h-full mx-auto"></div>
                 </div>
                 <div className="event-list">
-                    <Event sub="Finally my first job as a Software Engineer! I waited for this moment long enough...">
+                    <Event sub="Finally my first job as a Software Engineer!">
                         First Job @ Socialbakers
                     </Event>
                     <Event sub="You know, in these days this is the way graduations happen. It was an interesting experience, but for sure it could not replace what could have happened face-to-face">

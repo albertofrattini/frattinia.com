@@ -12,7 +12,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                hsans: ['Open Sans', 'sans-serif'],
+                hsans: ['Source Sans Pro', 'sans-serif'],
                 sans: ['Mulish', 'sans-serif'],
                 mono: ['Roboto Mono', 'monospace'],
                 serif: ['Merriweather', 'sans-serif'],

@@ -10,7 +10,7 @@ const Header = ({ title, subtitle }) => {
             {title && subtitle && (
                 <header>
                     <div className="bg-primary">
-                        <div className="max-w-4xl min-h-header h-full mx-auto px-6 py-10 flex flex-col justify-end relative">
+                        <div className="max-w-5xl min-h-header h-full mx-auto px-6 py-10 flex flex-col justify-end relative">
                             <a
                                 href="#contacts"
                                 className="absolute top-0 right-0 mt-4 mr-4 border border-fosforescent rounded text-fosforescent px-4 py-2"
@@ -28,7 +28,7 @@ const Header = ({ title, subtitle }) => {
                 </header>
             )}
             <div className="z-10 bg-white shadow sticky top-0">
-                <div className="flex px-4 py-2 items-baseline max-w-4xl mx-auto overflow-x-scroll">
+                <div className="flex px-4 py-2 items-baseline max-w-5xl mx-auto overflow-x-scroll">
                     <Link href="/">
                         <a className={linkClass}>🏠 Home</a>
                     </Link>

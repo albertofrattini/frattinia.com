@@ -24,17 +24,17 @@ const BlogPost = ({ frontMatter, children }) => {
                 />
             </Head>
             <article className="mt-8">
-                <h1 className="text-4xl mb-4 md:text-5xl">
+                <h1 className="text-4xl mb-4 font-hsans md:text-5xl">
                     {frontMatter.title}
                 </h1>
                 <div className="frontmatter">
                     <div className="flex items-center">
                         <Image
                             className="rounded-full"
-                            height="24"
-                            width="24"
+                            height="32"
+                            width="32"
                             quality="100"
-                            src="/images/me.png"
+                            src="/images/avatar.png"
                         />
                         <p>{frontMatter.author}</p>
                     </div>
