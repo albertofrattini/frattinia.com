@@ -1,28 +1,23 @@
 import React from 'react'
-import Head from 'next/head'
+
+import { NextSeo } from 'next-seo'
 
 import Timeline from '../components/Timeline'
+
+const url = 'https://albertofrattini.com/about'
+const title = 'About Me – Alberto Frattini'
 
 const About = () => {
     return (
         <>
-            <Head>
-                <title>About | Alberto Frattini</title>
-                <meta
-                    property="og:url"
-                    content="https://albertofrattini.com/about"
-                />
-                <meta
-                    property="og:title"
-                    content="About | Alberto Frattini"
-                    key="title"
-                />
-                <meta
-                    property="og:description"
-                    content="About me. I’m a developer and, somehow, a creative. Primarily I deal with Javascript and some of the stuff around it, suchs as React and Node."
-                    key="description"
-                />
-            </Head>
+            <NextSeo
+                title={title}
+                canonical={url}
+                openGraph={{
+                    url,
+                    title,
+                }}
+            />
             <section>
                 <p>
                     I am an Italian developer 👨🏻‍💻 and, somehow, a creative. I am
@@ -67,6 +62,7 @@ const About = () => {
                 </h2>
                 <p className="text-xl">
                     🇨🇿 🇮🇹 🇹🇭 🇵🇹 🇪🇸 🇨🇭 🏴󠁧󠁢󠁥󠁮󠁧󠁿 🇪🇬 🇳🇱 🇫🇷 🇬🇷 🇦🇱 🇲🇪 🇷🇸 🇭🇷 🇲🇦 🇩🇪 🇮🇸 🇺🇸 🇮🇪
+                    🇦🇹 🇸🇮 🇧🇦
                 </p>
             </section>
             <br />

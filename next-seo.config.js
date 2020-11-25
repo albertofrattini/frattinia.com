@@ -1,6 +1,6 @@
-const title = 'Alberto Frattini - Developer'
+const title = 'Alberto Frattini – Developer, photographer and writer'
 const description =
-    'Front-end and Back-end developer, mainly using Javascript alongside React and Node.'
+    'Front-end and Back-end developer, mainly using Javascript alongside React and Node. Adventure photography lover listening to electronic music and trying to write about interesting stuff.'
 
 const SEO = {
     title,
@@ -12,19 +12,19 @@ const SEO = {
         url: 'https://albertofrattini.com',
         title,
         description,
-        // images: [
-        //   {
-        //     url: 'https://albertofrattini.com/static/images/og.jpg',
-        //     alt: title,
-        //     width: 1280,
-        //     height: 720
-        //   }
-        // ]
+        images: [
+            {
+                url: 'https://albertofrattini.com/static/images/og.jpg',
+                alt: title,
+                width: 1280,
+                height: 720,
+            },
+        ],
     },
     twitter: {
         handle: '@albertofrattini',
         site: '@albertofrattini',
-        // cardType: 'summary_large_image'
+        cardType: 'summary_large_image',
     },
 }
 

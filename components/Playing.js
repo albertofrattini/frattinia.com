@@ -19,7 +19,9 @@ const Playing = () => {
                         height={64}
                         width={64}
                         quality="100"
-                        src={data?.albumImageUrl || '/images/spotify.jpg'}
+                        src={
+                            data?.albumImageUrl || '/static/images/spotify.png'
+                        }
                     />
                 </div>
                 <div className="ml-3 overflow-x-hidden">

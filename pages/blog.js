@@ -1,10 +1,16 @@
 import React, { useState } from 'react'
-import Head from 'next/head'
+
+import { NextSeo } from 'next-seo'
 
 import Post from '../components/Post'
 
 import { frontMatter as blogPosts } from './blog/**/*.mdx'
 import { parseDate } from '../utils/data-reducers'
+
+const url = 'https://albertofrattini.com/blog'
+const title = 'Blog – Alberto Frattini'
+const description =
+    'Here you can find enlighting ideas on programming, music and photography, book reviews, travelling tips and great stories.'
 
 const Blog = () => {
     const [search, setSearch] = useState('')
@@ -43,23 +49,16 @@ const Blog = () => {
 
     return (
         <>
-            <Head>
-                <title>Blog | Alberto Frattini</title>
-                <meta
-                    property="og:url"
-                    content="https://albertofrattini.com/blog"
-                />
-                <meta
-                    property="og:title"
-                    content="Blog | Alberto Frattini"
-                    key="title"
-                />
-                <meta
-                    property="og:description"
-                    content="Blog. This is where my ideas are meeting the paper (or in this case, the screen)"
-                    key="description"
-                />
-            </Head>
+            <NextSeo
+                title={title}
+                canonical={url}
+                description={description}
+                openGraph={{
+                    url,
+                    title,
+                    description,
+                }}
+            />
             <section>
                 <input
                     onChange={(e) => setSearch(e.target.value)}

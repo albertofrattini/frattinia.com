@@ -32,20 +32,6 @@ const Home = () => {
 
     return (
         <>
-            <Head>
-                <title>Alberto Frattini | Developer</title>
-                <meta property="og:url" content="https://albertofrattini.com" />
-                <meta
-                    property="og:title"
-                    content="Alberto Frattini | Developer"
-                    key="title"
-                />
-                <meta
-                    property="og:description"
-                    content="Front-end and Back-end developer, mainly using Javascript alongside React and Node."
-                    key="description"
-                />
-            </Head>
             <section>
                 {renderedArticles}
                 <div className="flex justify-center">
