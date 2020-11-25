@@ -14,7 +14,7 @@ const SEO = {
         description,
         images: [
             {
-                url: 'https://albertofrattini.com/static/images/og.jpg',
+                url: 'https://albertofrattini.com/static/images/og.png',
                 alt: title,
                 width: 1280,
                 height: 720,
