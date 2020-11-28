@@ -28,9 +28,16 @@ const Photos = () => {
             />
             <section>
                 <p>
-                    I am an Italian developer 👨🏻‍💻 and, somehow, a creative. I am
-                    now living in Prague 🏰 and I am working as a Software
-                    Engineer at Socialbakers.
+                    I started photography around 4 years ago and, since then, it
+                    has been the main way for me to express my creativity. My
+                    favourite subject is Nature: mountains ⛰, camping under the
+                    stars and capture the milky way 🌌, my girlfriend and my
+                    friends during our adventures and sometimes some interesting
+                    detail that our world offers us 🌿.
+                    <br />
+                    <br />
+                    Here are some of my favourite pictures, I hope you will
+                    enjoy going through them.
                 </p>
             </section>
             <br />

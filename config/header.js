@@ -14,9 +14,4 @@ module.exports = {
         subtitle:
             'Here you can find a brief introduction of myself. I hope it will tease you and make you want to know me better...',
     },
-    // '/photos': {
-    //     title: 'Photos',
-    //     subtitle:
-    //         'Here I will post my favourite photos from my travels. More will come inside the adventure articles.',
-    // },
 }
