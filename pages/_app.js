@@ -2,15 +2,13 @@ import '../styles/global.css'
 
 import Head from 'next/head'
 import Layout from '../components/Layout'
-import HeaderConfig from '../config/header'
 import { DefaultSeo } from 'next-seo'
 
 import SEO from '../next-seo.config'
 
-function App({ Component, pageProps, router }) {
-    const layoutConfig = HeaderConfig[router.pathname]
+function App({ Component, pageProps }) {
     return (
-        <Layout {...layoutConfig}>
+        <Layout>
             <Head>
                 <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
                 <meta

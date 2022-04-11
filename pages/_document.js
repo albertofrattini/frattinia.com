@@ -7,18 +7,6 @@ class MyDocument extends Document {
             <Html lang="en">
                 <Head>
                     <link
-                        href="https://fonts.googleapis.com/css?family=Merriweather:700"
-                        rel="stylesheet"
-                    ></link>
-                    <link
-                        href="https://fonts.googleapis.com/css?family=Roboto+Mono:400"
-                        rel="stylesheet"
-                    ></link>
-                    <link
-                        href="https://fonts.googleapis.com/css?family=Mulish:400,700"
-                        rel="stylesheet"
-                    ></link>
-                    <link
                         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700"
                         rel="stylesheet"
                     ></link>

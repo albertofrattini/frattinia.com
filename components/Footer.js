@@ -77,12 +77,6 @@ const Footer = () => {
                     />
                 </a>
             </div>
-            <br />
-            <hr />
-            <br />
-            <p className="text-center text-gray-700 text-sm">
-                © 2020 Alberto Frattini - Published with Vercel
-            </p>
         </footer>
     )
 }

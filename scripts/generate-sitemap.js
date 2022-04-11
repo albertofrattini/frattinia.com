@@ -1,9 +1,9 @@
-const fs = require('fs')
+const fs = require('fs');
 
-const globby = require('globby')
-const prettier = require('prettier')
+const globby = require('globby');
+const prettier = require('prettier');
 
-;(async () => {
+(async () => {
     const prettierConfig = await prettier.resolveConfig('./.prettierrc')
     const pages = await globby([
         'pages/**/*{.js,.mdx}',

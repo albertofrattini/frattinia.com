@@ -1,6 +1,6 @@
-const title = 'Alberto Frattini – Developer, photographer and writer'
+const title = 'Alberto Frattini – Who else?'
 const description =
-    'Front-end and Back-end developer, mainly using Javascript alongside React and Node. Adventure photography lover listening to electronic music and trying to write about interesting stuff.'
+    'TODO: description. If you read this, send me a message to remind me.'
 
 const SEO = {
     title,
