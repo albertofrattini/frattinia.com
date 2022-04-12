@@ -1,10 +1,10 @@
-import React from 'react'
-import Image from 'next/image'
-import useSWR from 'swr'
-import fetcher from '../lib/fetcher'
+import React from 'react';
+import Image from 'next/image';
+import useSWR from 'swr';
+import fetcher from '../lib/fetcher';
 
 const Playing = () => {
-    const { data } = useSWR('/api/now-playing', fetcher)
+    const { data } = useSWR('/api/now-playing', fetcher);
 
     return (
         <div className="w-full">
@@ -15,12 +15,13 @@ const Playing = () => {
                 <div className="h-16 w-16 rounded">
                     <Image
                         className="rounded"
+                        priority="true"
                         layout="fixed"
                         height={64}
                         width={64}
                         quality="100"
                         src={
-                            data?.albumImageUrl || '/static/images/spotify.png'
+                            data?.albumImageUrl || '/static/images/spotify.jpeg'
                         }
                     />
                 </div>
@@ -34,7 +35,7 @@ const Playing = () => {
                 </div>
             </a>
         </div>
-    )
-}
+    );
+};
 
-export default Playing
+export default Playing;
