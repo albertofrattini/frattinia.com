@@ -17,63 +17,57 @@ const Footer = () => {
             <Playing />
             <div id="contacts" className="flex justify-between">
                 <a
-                    className="py-2 px-3 hover:bg-gray-200 rounded"
+                    className="p-3 hover:bg-gray-200 rounded"
                     href="https://github.com/albifrattini"
                 >
                     <FontAwesomeIcon
                         icon={faGithub}
-                        className="text-gray-800"
-                        size="lg"
+                        className="text-gray-800 w-6 h-6"
                     />
                 </a>
                 <a
-                    className="py-2 px-3 hover:bg-gray-200 rounded"
+                    className="p-3 hover:bg-gray-200 rounded"
                     href="https://www.facebook.com/frattini.alberto/"
                 >
                     <FontAwesomeIcon
                         icon={faFacebook}
-                        className="text-gray-800"
-                        size="lg"
+                        className="text-gray-800 w-6 h-6"
                     />
                 </a>
                 <a
-                    className="py-2 px-3 hover:bg-gray-200 rounded"
+                    className="p-3 hover:bg-gray-200 rounded"
                     href="https://www.instagram.com/albi_frattini/"
                 >
                     <FontAwesomeIcon
                         icon={faInstagram}
-                        className="text-gray-800"
-                        size="lg"
+                        className="text-gray-800 w-6 h-6"
                     />
                 </a>
                 <a
-                    className="py-2 px-3 hover:bg-gray-200 rounded"
+                    className="p-3 hover:bg-gray-200 rounded"
                     href="https://www.linkedin.com/in/alberto-frattini-99758b151/"
                 >
                     <FontAwesomeIcon
                         icon={faLinkedinIn}
-                        className="text-gray-800"
-                        size="lg"
+                        className="text-gray-800 w-6 h-6"
                     />
                 </a>
                 <a
-                    className="py-2 px-3 hover:bg-gray-200 rounded"
+                    className="p-3 hover:bg-gray-200 rounded"
                     href="https://twitter.com/albertofrattini"
                 >
                     <FontAwesomeIcon
                         icon={faTwitter}
-                        className="text-gray-800"
-                        size="lg"
+                        className="text-gray-800 w-6 h-6"
                     />
                 </a>
                 <a
-                    className="py-2 px-3 hover:bg-gray-200 rounded"
+                    className="p-3 hover:bg-gray-200 rounded"
                     href="mailto:frattini.alberto@gmail.com"
                 >
                     <FontAwesomeIcon
                         icon={faEnvelopeOpen}
-                        className="text-gray-800"
-                        size="lg"
+                        className="text-gray-800 w-6 h-6"
                     />
                 </a>
             </div>

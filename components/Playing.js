@@ -9,7 +9,7 @@ const Playing = () => {
     return (
         <div className="w-full">
             <a
-                className="flex justify-start p-2 mb-12 max-w-xs mx-auto rounded border border-gray-300"
+                className="flex justify-start p-2 mb-12 max-w-xs mx-auto rounded-md border border-gray-200"
                 href={data ? data.songUrl : '#'}
             >
                 <div className="h-16 w-16 rounded">
