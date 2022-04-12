@@ -1,6 +1,6 @@
-const title = 'Alberto Frattini – Who else?'
+const title = 'Alberto Frattini – Who else?';
 const description =
-    'TODO: description. If you read this, send me a message to remind me.'
+    'TODO: description. If you read this, send me a message to remind me.';
 
 const SEO = {
     title,
@@ -26,6 +26,6 @@ const SEO = {
         site: '@albertofrattini',
         cardType: 'summary_large_image',
     },
-}
+};
 
-export default SEO
+export default SEO;

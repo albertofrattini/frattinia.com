@@ -1,15 +1,15 @@
-import React from 'react'
+import React from 'react';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faGithub,
     faFacebook,
     faInstagram,
     faLinkedinIn,
     faTwitter,
-} from '@fortawesome/free-brands-svg-icons'
-import { faEnvelopeOpen } from '@fortawesome/free-regular-svg-icons'
-import Playing from './Playing'
+} from '@fortawesome/free-brands-svg-icons';
+import { faEnvelopeOpen } from '@fortawesome/free-regular-svg-icons';
+import Playing from './Playing';
 
 const Footer = () => {
     return (
@@ -78,7 +78,7 @@ const Footer = () => {
                 </a>
             </div>
         </footer>
-    )
-}
+    );
+};
 
-export default Footer
+export default Footer;

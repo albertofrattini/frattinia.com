@@ -1,10 +1,10 @@
-import '../styles/global.css'
+import '../styles/global.css';
 
-import Head from 'next/head'
-import Layout from '../components/Layout'
-import { DefaultSeo } from 'next-seo'
+import Head from 'next/head';
+import Layout from '../components/Layout';
+import { DefaultSeo } from 'next-seo';
 
-import SEO from '../next-seo.config'
+import SEO from '../next-seo.config';
 
 function App({ Component, pageProps }) {
     return (
@@ -25,7 +25,7 @@ function App({ Component, pageProps }) {
             <DefaultSeo {...SEO} />
             <Component {...pageProps} />
         </Layout>
-    )
+    );
 }
 
-export default App
+export default App;
