@@ -3,7 +3,8 @@ import useSWR from 'swr';
 import fetcher from '../lib/fetcher';
 
 const Playing = () => {
-    const { data } = useSWR('/api/now-playing', fetcher);
+    // TODO change this type
+    const { data } = useSWR('/api/now-playing', fetcher) as any;
 
     return (
         <div className="w-full">
