@@ -20,6 +20,7 @@ const Playing = () => {
                         height={16}
                         width={16}
                         quality="100"
+                        alt="Music album cover"
                         src={
                             data?.albumImageUrl || '/static/images/spotify.jpeg'
                         }
