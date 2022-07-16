@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from "next/image"
 
 const Home = () => {
     return (
@@ -9,7 +9,7 @@ const Home = () => {
                 Alberto Frattini
               </h1>
               <h2 className="text-gray-700 dark:text-gray-200 mb-4">
-                Full Stack Software Developer @{' '}
+                Full Stack Software Developer @{" "}
                 <span className="font-semibold">Oracle</span>
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mb-16">

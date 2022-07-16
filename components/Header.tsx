@@ -1,11 +1,8 @@
-import Link from 'next/link';
-
 const Header = () => {
     return (
-        <div className='flex flex-col justify-center items-center px-8'>
-            <nav className="flex justify-between items-center pt-12 pb-16 w-full max-w-2xl mx-auto">
-                <Link href="/">Home</Link>
-                <button>Do something</button>
+        <div className="flex flex-col justify-center items-center px-8">
+            <nav className="flex justify-end items-center pt-12 pb-16 w-full max-w-2xl mx-auto">
+                <button className="py-2 px-4 bg-black text-gray-50">Contact Me</button>
             </nav>
         </div>
     );

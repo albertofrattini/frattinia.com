@@ -1,4 +1,4 @@
-import Playing from './Playing';
+import Playing from "./Playing";
 
 const Footer = () => {
     return (

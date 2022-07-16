@@ -1,16 +1,16 @@
-import Image from 'next/image';
-import useSWR from 'swr';
-import fetcher from '../lib/fetcher';
+import Image from "next/image";
+import useSWR from "swr";
+import fetcher from "../lib/fetcher";
 
 const Playing = () => {
     // TODO change this type
-    const { data } = useSWR('/api/now-playing', fetcher) as any;
+    const { data } = useSWR("/api/now-playing", fetcher) as any;
 
     return (
         <div className="w-full">
             <a
                 className="flex justify-center items-center"
-                href={data ? data.songUrl : '#'}
+                href={data ? data.songUrl : "#"}
             >
                 <div className="h-6 w-4">
                     <Image
@@ -22,13 +22,13 @@ const Playing = () => {
                         quality="100"
                         alt="Music album cover"
                         src={
-                            data?.albumImageUrl || '/static/images/spotify.jpeg'
+                            data?.albumImageUrl || "/static/images/spotify.jpeg"
                         }
                     />
                 </div>
                 <div className="h-6 ml-3 text-base overflow-x-hidden">
                     <span className="m-0 ">
-                        {data && (data.title || 'Not Playing')}
+                        {data && (data.title || "Not Playing")}
                     </span>
                 </div>
             </a>
