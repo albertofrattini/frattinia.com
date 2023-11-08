@@ -9,11 +9,11 @@ export default function Home() {
                 Alberto Frattini
               </h1>
               <h2 className="text-gray-700 dark:text-gray-200 mb-4">
-                Full Stack Software Developer @{" "}
-                <span className="font-semibold">Oracle</span>
+                Backend Engineer @{" "}
+                <span className="font-semibold">STRV</span>
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mb-16">
-                Passionate about running, reading and cooking - mostly eating. Currently looking for ways to improve.
+				Hey 👋 Welcome to my portfolio!
               </p>
             </div>
             <div className="w-[80px] sm:w-[176px] relative mb-8 sm:mb-0 mr-auto">
@@ -38,6 +38,10 @@ export default function Home() {
 					  Backend Engineer @{" "}
 					  <span className="font-semibold">STRV</span>
 				  </h2>
+				  <p className="ml-4 text-gray-600 dark:text-gray-400 mb-2">
+					  STRV is a web agency focused on creating amazing and uniquely designed digital products. Because
+					  of that, here you will see which projects I had been working on during my collaboration with them.
+				  </p>
 				  <p className="italic text-gray-600 dark:text-gray-400">
 					  Nav
 				  </p>
@@ -48,9 +52,11 @@ export default function Home() {
 				  </p>
 				  <br/>
 				  <p className="italic text-gray-600 dark:text-gray-400">
-					  Next project is wip...
+					  ShareStix
 				  </p>
 				  <p className="ml-4 text-gray-600 dark:text-gray-400">
+					  Creating a marketplace where users can purchase, trade and share high-value audio samples that
+					  can be used for collection and music production.
 				  </p>
 			  </div>
 			<div className="mb-8">
@@ -74,6 +80,7 @@ export default function Home() {
 				<h2 className="text-gray-700 dark:text-gray-200 mb-2">
 					Javascript Developer @{" "}
 					<span className="font-semibold">Emplifi</span>
+					{" "}(previously known as SocialBakers)
 				</h2>
 				<p className="italic text-gray-600 dark:text-gray-400">
 					Socialbakers Suite
