@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import useSWR from "swr";
 import fetcher from "../lib/fetcher";
@@ -16,10 +18,9 @@ const Playing = () => {
                     <Image
                         className="rounded"
                         priority={true}
-                        layout="fixed"
                         height={16}
                         width={16}
-                        quality="100"
+                        quality={100}
                         alt="Music album cover"
                         src={
                             data?.albumImageUrl || "/static/images/spotify.jpeg"
