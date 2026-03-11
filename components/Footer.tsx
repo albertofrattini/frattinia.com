@@ -2,7 +2,7 @@ import Playing from "./Playing";
 
 const ExternalLink = ({ href, children }) => (
     <a
-      className="text-gray-500 hover:text-gray-600 transition"
+      className="text-gray-500 hover:text-gray-800 dark:hover:text-gray-200 text-sm font-medium tracking-wide transition-colors duration-200 underline-offset-4 hover:underline"
       target="_blank"
       rel="noopener noreferrer"
       href={href}

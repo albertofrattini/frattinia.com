@@ -24,6 +24,18 @@ module.exports = {
             },
             fontFamily: {
                 sans: ["var(--font-ibm-plex-sans)", ...fontFamily.sans],
+                serif: ["var(--font-instrument-serif)", "Georgia", "serif"],
+            },
+            fontSize: {
+                'xs':   ['0.75rem',  { lineHeight: '1rem',     letterSpacing: '0.025em' }],
+                'sm':   ['0.875rem', { lineHeight: '1.375rem', letterSpacing: '0.01em' }],
+                'base': ['1rem',     { lineHeight: '1.625rem', letterSpacing: '0' }],
+                'lg':   ['1.125rem', { lineHeight: '1.75rem',  letterSpacing: '-0.01em' }],
+                'xl':   ['1.25rem',  { lineHeight: '1.75rem',  letterSpacing: '-0.015em' }],
+                '2xl':  ['1.5rem',   { lineHeight: '2rem',     letterSpacing: '-0.02em' }],
+                '3xl':  ['1.875rem', { lineHeight: '2.25rem',  letterSpacing: '-0.025em' }],
+                '4xl':  ['2.25rem',  { lineHeight: '2.5rem',   letterSpacing: '-0.03em' }],
+                '5xl':  ['3rem',     { lineHeight: '3.25rem',  letterSpacing: '-0.035em' }],
             },
             typography: (theme) => ({
                 DEFAULT: {

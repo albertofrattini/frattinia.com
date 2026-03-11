@@ -5,5 +5,40 @@
 @layer base {
     html {
         scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    a {
+        cursor: pointer;
+    }
+
+    body {
+        @apply font-sans text-base leading-relaxed;
+        font-feature-settings: "kern" 1, "liga" 1;
+    }
+
+    h1, h2, h3 {
+        @apply font-serif;
+        text-wrap: balance;
+    }
+
+    p {
+        text-wrap: pretty;
+    }
+}
+
+@layer components {
+    .work-list {
+        @apply ml-6 space-y-1.5;
+    }
+
+    .work-list li {
+        @apply text-gray-600 dark:text-gray-400 leading-relaxed pl-4 relative;
+    }
+
+    .work-list li::before {
+        content: "";
+        @apply absolute left-0 top-[0.6em] w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-gray-600;
     }
 }
