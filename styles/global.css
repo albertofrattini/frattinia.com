@@ -3,6 +3,30 @@
 @tailwind utilities;
 
 @layer base {
+    :root {
+        --ide-bg: #ffffff;
+        --ide-sidebar: #f5f5f5;
+        --ide-border: #e0e0e0;
+        --ide-hover: #eeeeee;
+        --ide-text: #333333;
+        --ide-muted: #999999;
+        --ide-accent: #0066cc;
+        --ide-string: #228822;
+        --ide-selected: #e8f0fe;
+    }
+
+    .dark {
+        --ide-bg: #1e1e1e;
+        --ide-sidebar: #252526;
+        --ide-border: #3c3c3c;
+        --ide-hover: #2a2d2e;
+        --ide-text: #cccccc;
+        --ide-muted: #858585;
+        --ide-accent: #569cd6;
+        --ide-string: #6a9955;
+        --ide-selected: #264f78;
+    }
+
     html,
     body {
         @apply h-full overflow-hidden;
@@ -26,10 +50,10 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #d4d4d4;
+    background: var(--ide-border);
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #b0b0b0;
+    background: var(--ide-muted);
 }

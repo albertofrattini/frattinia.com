@@ -1,5 +1,6 @@
 module.exports = {
     content: ["./app/**/*.tsx", "./components/**/*.tsx"],
+    darkMode: "class",
     theme: {
         extend: {
             fontFamily: {
@@ -13,15 +14,15 @@ module.exports = {
                 ],
             },
             colors: {
-                "ide-bg": "#ffffff",
-                "ide-sidebar": "#f5f5f5",
-                "ide-border": "#e0e0e0",
-                "ide-hover": "#eeeeee",
-                "ide-text": "#333333",
-                "ide-muted": "#999999",
-                "ide-accent": "#0066cc",
-                "ide-string": "#228822",
-                "ide-selected": "#e8f0fe",
+                "ide-bg": "var(--ide-bg)",
+                "ide-sidebar": "var(--ide-sidebar)",
+                "ide-border": "var(--ide-border)",
+                "ide-hover": "var(--ide-hover)",
+                "ide-text": "var(--ide-text)",
+                "ide-muted": "var(--ide-muted)",
+                "ide-accent": "var(--ide-accent)",
+                "ide-string": "var(--ide-string)",
+                "ide-selected": "var(--ide-selected)",
             },
         },
     },

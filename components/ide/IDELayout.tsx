@@ -5,6 +5,7 @@ import Sidebar from "./Sidebar";
 import TabBar from "./TabBar";
 import Breadcrumbs from "./Breadcrumbs";
 import StatusBar from "./StatusBar";
+import ThemeToggle from "./ThemeToggle";
 
 export default function IDELayout({
     children,
@@ -38,7 +39,7 @@ export default function IDELayout({
 
                 {/* Editor area */}
                 <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
-                    {/* Mobile hamburger + Tab bar */}
+                    {/* Mobile hamburger + Tab bar + Theme toggle */}
                     <div className="flex items-center">
                         <button
                             className="md:hidden flex items-center justify-center w-[36px] h-[36px] text-ide-muted hover:text-ide-text hover:bg-ide-hover border-b border-ide-border"
@@ -61,6 +62,7 @@ export default function IDELayout({
                         <div className="flex-1">
                             <TabBar />
                         </div>
+                        <ThemeToggle />
                     </div>
                     <Breadcrumbs />
                     <div className="flex-1 overflow-auto">{children}</div>
