@@ -10,7 +10,7 @@ export default function WelcomeScreen() {
             <p className="text-[13px] mb-2">
                 Welcome to{" "}
                 <span className="text-ide-text font-semibold">
-                    albertofratini.com
+                    albertofrattini.com
                 </span>
             </p>
             <p className="text-[12px]">

@@ -72,7 +72,7 @@ export default function Sidebar({ onFileClick }: { onFileClick?: () => void }) {
                 <span className="mr-2">
                     <FolderIcon open={true} />
                 </span>
-                albertofratini.com
+                albertofrattini.com
             </div>
 
             {/* File tree */}

@@ -28,7 +28,7 @@ export interface FolderNode {
 export type TreeNode = FileNode | FolderNode;
 
 export const fileTree: FolderNode = {
-    name: "albertofratini.com",
+    name: "albertofrattini.com",
     slug: "",
     type: "folder",
     defaultOpen: true,
@@ -121,7 +121,7 @@ export function resolveFile(slugSegments: string[]): FileNode | null {
 }
 
 export function getBreadcrumbs(slugSegments: string[]): string[] {
-    return ["albertofratini.com", ...slugSegments];
+    return ["albertofrattini.com", ...slugSegments];
 }
 
 export function getAllFilePaths(): string[][] {
