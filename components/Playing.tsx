@@ -9,31 +9,24 @@ const Playing = () => {
     const { data } = useSWR("/api/now-playing", fetcher) as any;
 
     return (
-        <div className="w-full">
-            <a
-                className="flex justify-center items-center"
-                href={data ? data.songUrl : "#"}
-            >
-                <div className="h-6 w-4">
-                    <Image
-                        className="rounded"
-                        priority={true}
-                        height={16}
-                        width={16}
-                        quality={100}
-                        alt="Music album cover"
-                        src={
-                            data?.albumImageUrl || "/static/images/spotify.jpeg"
-                        }
-                    />
-                </div>
-                <div className="h-6 ml-3 text-base overflow-x-hidden">
-                    <span className="m-0 ">
-                        {data && (data.title || "Not Playing")}
-                    </span>
-                </div>
-            </a>
-        </div>
+        <a
+            className="flex items-center gap-1.5 text-[11px] text-ide-muted hover:text-ide-text transition-colors"
+            href={data?.songUrl || "#"}
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <Image
+                className="rounded-sm"
+                height={14}
+                width={14}
+                quality={100}
+                alt="Music album cover"
+                src={data?.albumImageUrl || "/static/images/spotify.jpeg"}
+            />
+            <span className="truncate max-w-[180px]">
+                {data?.title || "Not Playing"}
+            </span>
+        </a>
     );
 };
 

@@ -1,26 +1,17 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Sans, Instrument_Serif } from "next/font/google";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import { JetBrains_Mono } from "next/font/google";
+import IDELayout from "../components/ide/IDELayout";
 import "../styles/global.css";
 
-const ibmPlexSans = IBM_Plex_Sans({
+const jetbrainsMono = JetBrains_Mono({
     subsets: ["latin"],
-    weight: ["400", "500", "600", "700"],
-    variable: "--font-ibm-plex-sans",
-    display: "swap",
-});
-
-const instrumentSerif = Instrument_Serif({
-    subsets: ["latin"],
-    weight: "400",
-    style: ["normal", "italic"],
-    variable: "--font-instrument-serif",
+    variable: "--font-jetbrains-mono",
     display: "swap",
 });
 
 export const metadata: Metadata = {
-    title: "Alberto Frattini - javascript developer",
+    title: "albertofratini.com",
+    description: "Alberto Frattini - Lead Engineer @ STRV",
 };
 
 export default function RootLayout({
@@ -29,13 +20,9 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en" className={`${ibmPlexSans.variable} ${instrumentSerif.variable}`}>
-            <body className="bg-gray-50 dark:bg-gray-900">
-                <Header />
-                <main className="flex flex-col justify-center px-8 bg-gray-50 dark:bg-gray-900">
-                    {children}
-                    <Footer />
-                </main>
+        <html lang="en" className={jetbrainsMono.variable}>
+            <body className="h-screen overflow-hidden font-mono text-[13px] leading-[1.6] text-ide-text bg-ide-bg">
+                <IDELayout>{children}</IDELayout>
             </body>
         </html>
     );

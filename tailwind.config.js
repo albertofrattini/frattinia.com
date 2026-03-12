@@ -1,114 +1,29 @@
-const { spacing, fontFamily } = require("tailwindcss/defaultTheme");
-
 module.exports = {
     content: ["./app/**/*.tsx", "./components/**/*.tsx"],
-    darkMode: "class",
     theme: {
         extend: {
-            colors: {
-                primary: "#105EDB",
-                secondary: "#EC564D",
-                fosforescent: "#64F58D",
-                gray: {
-                    0: "#fff",
-                    100: "#fafafa",
-                    200: "#eaeaea",
-                    300: "#999999",
-                    400: "#888888",
-                    500: "#666666",
-                    600: "#444444",
-                    700: "#333333",
-                    800: "#222222",
-                    900: "#111111",
-                },
-            },
             fontFamily: {
-                sans: ["var(--font-ibm-plex-sans)", ...fontFamily.sans],
-                serif: ["var(--font-instrument-serif)", "Georgia", "serif"],
+                mono: [
+                    "var(--font-jetbrains-mono)",
+                    "SF Mono",
+                    "Menlo",
+                    "Monaco",
+                    "Consolas",
+                    "monospace",
+                ],
             },
-            fontSize: {
-                'xs':   ['0.75rem',  { lineHeight: '1rem',     letterSpacing: '0.025em' }],
-                'sm':   ['0.875rem', { lineHeight: '1.375rem', letterSpacing: '0.01em' }],
-                'base': ['1rem',     { lineHeight: '1.625rem', letterSpacing: '0' }],
-                'lg':   ['1.125rem', { lineHeight: '1.75rem',  letterSpacing: '-0.01em' }],
-                'xl':   ['1.25rem',  { lineHeight: '1.75rem',  letterSpacing: '-0.015em' }],
-                '2xl':  ['1.5rem',   { lineHeight: '2rem',     letterSpacing: '-0.02em' }],
-                '3xl':  ['1.875rem', { lineHeight: '2.25rem',  letterSpacing: '-0.025em' }],
-                '4xl':  ['2.25rem',  { lineHeight: '2.5rem',   letterSpacing: '-0.03em' }],
-                '5xl':  ['3rem',     { lineHeight: '3.25rem',  letterSpacing: '-0.035em' }],
+            colors: {
+                "ide-bg": "#ffffff",
+                "ide-sidebar": "#f5f5f5",
+                "ide-border": "#e0e0e0",
+                "ide-hover": "#eeeeee",
+                "ide-text": "#333333",
+                "ide-muted": "#999999",
+                "ide-accent": "#0066cc",
+                "ide-string": "#228822",
+                "ide-selected": "#e8f0fe",
             },
-            typography: (theme) => ({
-                DEFAULT: {
-                    css: {
-                        color: theme("colors.gray.700"),
-                        a: {
-                            color: theme("colors.blue.500"),
-                            "&:hover": {
-                                color: theme("colors.blue.700"),
-                            },
-                            code: { color: theme("colors.blue.400") },
-                        },
-                        "h2,h3,h4": {
-                            "scroll-margin-top": spacing[32],
-                        },
-                        thead: {
-                            borderBottomColor: theme("colors.gray.200"),
-                        },
-                        code: { color: theme("colors.pink.500") },
-                        "blockquote p:first-of-type::before": false,
-                        "blockquote p:last-of-type::after": false,
-                    },
-                },
-                dark: {
-                    css: {
-                        color: theme("colors.gray.200"),
-                        a: {
-                            color: theme("colors.blue.400"),
-                            "&:hover": {
-                                color: theme("colors.blue.600"),
-                            },
-                            code: { color: theme("colors.blue.400") },
-                        },
-                        blockquote: {
-                            borderLeftColor: theme("colors.gray.700"),
-                            color: theme("colors.gray.300"),
-                        },
-                        "h2,h3,h4": {
-                            color: theme("colors.gray.100"),
-                            "scroll-margin-top": spacing[32],
-                        },
-                        hr: { borderColor: theme("colors.gray.700") },
-                        ol: {
-                            li: {
-                                "&:before": { color: theme("colors.gray.500") },
-                            },
-                        },
-                        ul: {
-                            li: {
-                                "&:before": {
-                                    backgroundColor: theme("colors.gray.500"),
-                                },
-                            },
-                        },
-                        strong: { color: theme("colors.gray.100") },
-                        thead: {
-                            th: {
-                                color: theme("colors.gray.100"),
-                            },
-                            borderBottomColor: theme("colors.gray.600"),
-                        },
-                        tbody: {
-                            tr: {
-                                borderBottomColor: theme("colors.gray.700"),
-                            },
-                        },
-                    },
-                },
-            }),
         },
     },
-    variants: {
-        typography: ["dark"],
-    },
-    plugins: [require("@tailwindcss/typography")],
+    plugins: [],
 };

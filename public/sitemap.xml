@@ -1,2 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> </urlset>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://albertofratini.com</loc></url>
+  <url><loc>https://albertofratini.com/profile/work-experience</loc></url>
+  <url><loc>https://albertofratini.com/profile/education</loc></url>
+  <url><loc>https://albertofratini.com/profile/interests</loc></url>
+  <url><loc>https://albertofratini.com/social/github</loc></url>
+  <url><loc>https://albertofratini.com/social/linkedin</loc></url>
+  <url><loc>https://albertofratini.com/social/x</loc></url>
+</urlset>
