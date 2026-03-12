@@ -4,6 +4,7 @@ import { interests } from "./content/interests";
 import { github } from "./content/github";
 import { linkedin } from "./content/linkedin";
 import { x } from "./content/x";
+import { hammertimemagazine } from "./content/hammertimemagazine";
 
 export interface VirtualFileContent {
     frontmatter: Record<string, string>;
@@ -63,7 +64,15 @@ export const fileTree: FolderNode = {
             name: "projects",
             slug: "projects",
             type: "folder",
-            children: [],
+            defaultOpen: true,
+            children: [
+                {
+                    name: "hammertimemagazine.md",
+                    slug: "hammertimemagazine",
+                    type: "file",
+                    content: hammertimemagazine,
+                },
+            ],
         },
         {
             name: "social",

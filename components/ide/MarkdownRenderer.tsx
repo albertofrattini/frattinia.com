@@ -54,6 +54,26 @@ function highlightLine(
         );
     }
 
+    // ![alt](src) image
+    const imgMatch = line.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+    if (imgMatch) {
+        return (
+            <span>
+                <span className="text-ide-muted">![</span>
+                <span className="text-ide-accent">{imgMatch[1]}</span>
+                <span className="text-ide-muted">](</span>
+                <span className="text-ide-string">{imgMatch[2]}</span>
+                <span className="text-ide-muted">)</span>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                    src={imgMatch[2]}
+                    alt={imgMatch[1]}
+                    className="mt-2 max-w-full rounded border border-ide-border"
+                />
+            </span>
+        );
+    }
+
     // - list item
     if (line.match(/^(\s*)- /)) {
         const match = line.match(/^(\s*)(- )(.*)$/);

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { fileTree } from "../../data/filesystem";
+import Link from "next/link";
 import SidebarItem from "./SidebarItem";
 import FolderIcon from "../icons/FolderIcon";
 
@@ -68,12 +69,16 @@ export default function Sidebar({ onFileClick }: { onFileClick?: () => void }) {
     return (
         <div className="h-full flex flex-col bg-ide-sidebar border-r border-ide-border select-none">
             {/* Project header */}
-            <div className="flex items-center h-[36px] px-3 border-b border-ide-border text-[12px] font-semibold text-ide-text tracking-wide">
+            <Link
+                href="/"
+                onClick={onFileClick}
+                className="flex items-center h-[36px] px-3 border-b border-ide-border text-[12px] font-semibold text-ide-text tracking-wide hover:bg-ide-hover transition-colors"
+            >
                 <span className="mr-2">
                     <FolderIcon open={true} />
                 </span>
                 albertofrattini.com
-            </div>
+            </Link>
 
             {/* File tree */}
             <div className="flex-1 overflow-y-auto py-1 text-[13px]">
