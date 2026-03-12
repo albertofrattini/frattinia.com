@@ -5,6 +5,9 @@ import { github } from "./content/github";
 import { linkedin } from "./content/linkedin";
 import { x } from "./content/x";
 import { hammertimemagazine } from "./content/hammertimemagazine";
+import { totalsportlab } from "./content/totalsportlab";
+import { morinigallaratipublishing } from "./content/morinigallaratipublishing";
+import { sartma } from "./content/sartma";
 
 export interface VirtualFileContent {
     frontmatter: Record<string, string>;
@@ -71,6 +74,24 @@ export const fileTree: FolderNode = {
                     slug: "hammertimemagazine",
                     type: "file",
                     content: hammertimemagazine,
+                },
+                {
+                    name: "totalsportlab.md",
+                    slug: "totalsportlab",
+                    type: "file",
+                    content: totalsportlab,
+                },
+                {
+                    name: "morinigallaratipublishing.md",
+                    slug: "morinigallaratipublishing",
+                    type: "file",
+                    content: morinigallaratipublishing,
+                },
+                {
+                    name: "sartma.md",
+                    slug: "sartma",
+                    type: "file",
+                    content: sartma,
                 },
             ],
         },

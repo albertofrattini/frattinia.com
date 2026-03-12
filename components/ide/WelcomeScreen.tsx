@@ -1,10 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { projects } from "../../data/projects";
 
 export default function WelcomeScreen() {
+    const router = useRouter();
+
     return (
         <div className="flex-1 overflow-auto">
             <div className="max-w-3xl mx-auto px-6 py-10">
@@ -32,10 +34,10 @@ export default function WelcomeScreen() {
 
                     <div className="grid gap-4">
                         {projects.map((project) => (
-                            <Link
+                            <div
                                 key={project.slug}
-                                href={`/projects/${project.slug}`}
-                                className="group block border border-ide-border rounded hover:border-ide-accent transition-colors overflow-hidden"
+                                onClick={() => router.push(`/projects/${project.slug}`)}
+                                className="group block border border-ide-border rounded hover:border-ide-accent transition-colors overflow-hidden cursor-pointer"
                             >
                                 <div className="flex flex-col sm:flex-row">
                                     {/* Image */}
@@ -85,7 +87,7 @@ export default function WelcomeScreen() {
                                         </div>
                                     </div>
                                 </div>
-                            </Link>
+                            </div>
                         ))}
                     </div>
                 </div>
