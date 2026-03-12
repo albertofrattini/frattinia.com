@@ -36,7 +36,7 @@ export default function SidebarItem({
                 <button
                     onClick={() => toggleFolder(currentPath)}
                     className="flex items-center w-full h-[28px] hover:bg-ide-hover text-left"
-                    style={{ paddingLeft: `${depth * 16}px` }}
+                    style={{ paddingLeft: `${depth * 12}px` }}
                 >
                     <span className="flex-shrink-0 w-4 h-4 flex items-center justify-center mr-1 text-ide-muted">
                         <ChevronIcon expanded={isExpanded} />
@@ -79,10 +79,9 @@ export default function SidebarItem({
                     : ""
             }`}
             style={{
-                paddingLeft: `${depth * 16 + (isActive ? 14 : 16)}px`,
+                paddingLeft: `${depth * 12 + (isActive ? 18 : 20)}px`,
             }}
         >
-            <span className="flex-shrink-0 w-4 h-4 mr-1" />
             <span className="flex-shrink-0 mr-1.5">
                 <FileIcon />
             </span>

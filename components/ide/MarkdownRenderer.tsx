@@ -101,13 +101,19 @@ function highlightInline(text: string): React.ReactNode {
                 );
             }
             parts.push(
-                <span key={key++}>
+                <a
+                    key={key++}
+                    href={linkMatch[3]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                >
                     <span className="text-ide-muted">[</span>
                     <span className="text-ide-accent">{linkMatch[2]}</span>
                     <span className="text-ide-muted">](</span>
                     <span className="text-ide-string">{linkMatch[3]}</span>
                     <span className="text-ide-muted">)</span>
-                </span>
+                </a>
             );
             remaining = linkMatch[4];
             continue;
@@ -187,30 +193,29 @@ export default function MarkdownRenderer({
     let fmDelimiterCount = 0;
 
     return (
-        <div className="flex overflow-auto h-full font-mono text-[13px] leading-[1.6]">
-            {/* Line numbers gutter */}
-            <div className="flex-shrink-0 w-[50px] md:w-[50px] text-right pr-4 select-none text-ide-muted border-r border-ide-border bg-ide-bg sticky left-0">
-                {allLines.map((_, i) => (
-                    <div key={i} className="leading-[1.6]">
-                        {i + 1}
-                    </div>
-                ))}
-            </div>
+        <div className="overflow-auto h-full font-mono text-[13px] leading-[1.6]">
+            {allLines.map((line, i) => {
+                const wasFm = fmDelimiterCount;
+                if (line === "---") fmDelimiterCount++;
+                const inFm =
+                    wasFm >= 1 && fmDelimiterCount < 2 && line !== "---";
 
-            {/* Content */}
-            <div className="flex-1 pl-4 overflow-x-auto">
-                {allLines.map((line, i) => {
-                    const wasFm = fmDelimiterCount;
-                    if (line === "---") fmDelimiterCount++;
-                    const inFm =
-                        wasFm >= 1 && fmDelimiterCount < 2 && line !== "---";
-
-                    return (
-                        <div key={i} className="leading-[1.6] whitespace-pre">
+                return (
+                    <div key={i} className="flex leading-[1.6]">
+                        <div className="flex-shrink-0 w-[50px] text-right pr-4 select-none text-ide-muted border-r border-ide-border">
+                            {i + 1}
+                        </div>
+                        <div className="flex-1 pl-4 whitespace-pre-wrap break-words min-w-0">
                             {line === "" ? "\u00A0" : highlightLine(line, inFm)}
                         </div>
-                    );
-                })}
+                    </div>
+                );
+            })}
+            <div className="flex leading-[1.6]">
+                <div className="flex-shrink-0 w-[50px] text-right pr-4 select-none text-ide-muted border-r border-ide-border">
+                    &nbsp;
+                </div>
+                <div className="flex-1 pl-4">&nbsp;</div>
             </div>
         </div>
     );
