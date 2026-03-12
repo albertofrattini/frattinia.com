@@ -68,7 +68,7 @@ export default function Sidebar({ onFileClick }: { onFileClick?: () => void }) {
     return (
         <div className="h-full flex flex-col bg-ide-sidebar border-r border-ide-border select-none">
             {/* Project header */}
-            <div className="flex items-center h-[36px] px-3 border-b border-ide-border text-[12px] font-semibold text-ide-text uppercase tracking-wide">
+            <div className="flex items-center h-[36px] px-3 border-b border-ide-border text-[12px] font-semibold text-ide-text tracking-wide">
                 <span className="mr-2">
                     <FolderIcon open={true} />
                 </span>
