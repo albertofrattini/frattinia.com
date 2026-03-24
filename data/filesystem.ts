@@ -8,6 +8,7 @@ import { hammertimemagazine } from "./content/hammertimemagazine";
 import { totalsportlab } from "./content/totalsportlab";
 import { morinigallaratipublishing } from "./content/morinigallaratipublishing";
 import { sartma } from "./content/sartma";
+import { eventsContent } from "./content/events";
 
 export interface VirtualFileContent {
     frontmatter: Record<string, string>;
@@ -92,6 +93,20 @@ export const fileTree: FolderNode = {
                     slug: "sartma",
                     type: "file",
                     content: sartma,
+                },
+            ],
+        },
+        {
+            name: "events",
+            slug: "events",
+            type: "folder",
+            defaultOpen: true,
+            children: [
+                {
+                    name: "calendar.md",
+                    slug: "calendar",
+                    type: "file",
+                    content: eventsContent,
                 },
             ],
         },
