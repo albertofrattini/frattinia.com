@@ -32,6 +32,16 @@ Competitive Pokémon tournament circuit. Alberto follows the Championship Series
 - When dates differ between sources, Victory Road's VGC-specific dates are usually most accurate.
 - ID pattern: `vgc-{year}-{city}-{type}` (types: `regional`, `sc`, `naic`, `euic`, `laic`, `ocic`, `global-challenge`, `grand-challenge`)
 
+### Typical Schedule & Times
+- **Victory Road individual event pages** (`victoryroad.pro/{year}-{city}/`) are the best source for exact times — they list players meeting times in both local and UTC.
+- Standard Regionals/Specials: Players meeting at 08:30 local time each day. Swiss rounds start immediately after.
+- Lima SC is an exception: players meeting at 08:00 local time.
+- Internationals: Players meeting typically at 09:00 local time (based on 2025 NAIC).
+- Global/Grand Challenges: exact UTC times from Victory Road or Bulbagarden — usually start at 02:00 UTC on day 1.
+- **End times are never published.** Estimate ~19:00 local for day 2 of 2-day events. Single-day events (like Cape Town SC) can run until ~22:00 local. Note "End time is approximate" in descriptions.
+- Badge pickup is usually available the day before (Friday) from 4-7 PM local, or early morning of day 1 from ~07:00 local.
+- Team list submission deadline is always 3 hours before the event starts.
+
 ---
 
 ## Global Preferences

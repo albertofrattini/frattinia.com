@@ -22,8 +22,9 @@ For each topic area, use the best sources available. The interests file may list
 **General research approach:**
 - Search with specific queries: include the year, date range, and topic keywords
 - Cross-reference at least 2 sources when dates are ambiguous
-- Gather for each event: exact name, exact dates, city/country/venue, description, official URL
+- Gather for each event: exact name, exact dates **and times**, city/country/venue, description, official URL
 - Note registration status, ticket availability, or any relevant logistics if visible
+- **Always try to find specific start/end times**, not just dates. Check official event pages, registration pages, and schedules for exact hours. Times make events far more useful on a phone calendar.
 
 **When researching a topic for the first time**, take note of which sources were most useful. You'll save these to the interests file later so future searches are faster.
 
@@ -57,15 +58,49 @@ After confirmation, add events to `data/events.ts` following this structure:
 {
     id: string,          // kebab-case: "{topic}-{year}-{name-or-city}"
     title: string,       // human-readable event name
-    start: string,       // "YYYY-MM-DD" for all-day, or ISO 8601 UTC for timed events
-    end: string,         // "YYYY-MM-DD" (EXCLUSIVE — day AFTER the last day) for all-day
-    allDay?: boolean,    // true for multi-day events, conferences, tournaments
+    start: string,       // "YYYY-MM-DD" for all-day, or ISO 8601 UTC for timed (e.g. "2026-04-04T07:00:00Z")
+    end: string,         // "YYYY-MM-DD" (EXCLUSIVE — day AFTER last day) for all-day, or ISO 8601 UTC for timed
+    allDay?: boolean,    // true ONLY when specific times are not available
     location: string,    // "Venue, City, Country" — as specific as possible
-    description: string, // plain text summary
+    description: string, // plain text summary — include secondary times and logistics here
     url?: string,        // official event page
     status?: "CONFIRMED" | "TENTATIVE" | "CANCELLED"  // defaults to CONFIRMED
 }
 ```
+
+### Prefer Specific Times Over All-Day Events
+
+Always try to use specific start/end times rather than all-day events. Timed events are much more useful on a phone calendar — they show up at the right time with reminders.
+
+- **Use timed events** when you can find specific hours (even approximate ones). Store times in ISO 8601 UTC format: `"2026-04-04T07:00:00Z"`. Convert from the event's local timezone to UTC.
+- **Use all-day events** (`allDay: true`) only as a fallback when no times are available at all.
+- **Multi-day events with times**: Create the event from the start time on day 1 to the end time on the last day. For example, a tournament running 9 AM–6 PM Saturday and 9 AM–5 PM Sunday (local) becomes one event from Saturday 9 AM to Sunday 5 PM (in UTC).
+
+### Handling Multiple Times
+
+Events often have multiple relevant times (doors open vs show starts, registration vs round 1, etc.). Use judgment to pick the most actionable time as the event start, and put the other times in the description.
+
+**Examples:**
+- Concert: doors open 7 PM, band starts 9 PM → start = 7 PM, description includes "Band starts at 9 PM"
+- Tournament: registration 8 AM, round 1 at 9 AM → start = 8 AM, description includes "Round 1 starts at 9 AM"
+- Conference: doors open 8:30 AM, keynote 9 AM → start = 8:30 AM, description includes "Keynote at 9 AM"
+
+The principle: pick the time Alberto should plan to arrive, and note the "main action" time in the description.
+
+### Timezone Handling
+
+Events happen in local timezones but ICS stores UTC. When adding timed events:
+1. Find the event's local time and timezone
+2. Convert to UTC for the `start`/`end` fields
+3. Mention the local time in the description so it's human-readable: "Starts at 9:00 AM local time (CEST)"
+
+Common offsets (adjust for DST):
+- US Eastern: UTC-4 (EDT) / UTC-5 (EST)
+- US Central: UTC-5 (CDT) / UTC-6 (CST)
+- US Pacific: UTC-7 (PDT) / UTC-8 (PST)
+- Central Europe: UTC+2 (CEST) / UTC+1 (CET)
+- Japan/Korea: UTC+9 (no DST)
+- Australia Eastern: UTC+10 (AEST) / UTC+11 (AEDT)
 
 ### Critical: End Date is Exclusive for All-Day Events
 

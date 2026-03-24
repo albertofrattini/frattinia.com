@@ -1,24 +1,11 @@
 import { events, CalendarEvent } from "../events";
 
-function formatEventDate(dateStr: string, allDay?: boolean): string {
-    if (allDay) {
-        const d = new Date(dateStr + "T00:00:00Z");
-        return d.toLocaleDateString("en-US", {
-            weekday: "short",
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-            timeZone: "UTC",
-        });
-    }
-    const d = new Date(dateStr);
-    return d.toLocaleDateString("en-US", {
+function formatDay(date: Date): string {
+    return date.toLocaleDateString("en-US", {
         weekday: "short",
         year: "numeric",
         month: "long",
         day: "numeric",
-        hour: "2-digit",
-        minute: "2-digit",
         timeZone: "UTC",
     });
 }
@@ -31,14 +18,17 @@ function formatDateRange(event: CalendarEvent): string {
         endDate.setUTCDate(endDate.getUTCDate() - 1);
 
         if (startDate.getTime() === endDate.getTime()) {
-            return formatEventDate(event.start, true);
+            return formatDay(startDate);
         }
-        return `${formatEventDate(event.start, true)} - ${formatEventDate(
-            endDate.toISOString().split("T")[0],
-            true
-        )}`;
+        return `${formatDay(startDate)} - ${formatDay(endDate)}`;
     }
-    return `${formatEventDate(event.start)} - ${formatEventDate(event.end)} (UTC)`;
+    // For timed events, show the date range (local times are in the description)
+    const startDate = new Date(event.start);
+    const endDate = new Date(event.end);
+    if (startDate.toISOString().split("T")[0] === endDate.toISOString().split("T")[0]) {
+        return formatDay(startDate);
+    }
+    return `${formatDay(startDate)} - ${formatDay(endDate)}`;
 }
 
 function renderEvent(event: CalendarEvent): string {
